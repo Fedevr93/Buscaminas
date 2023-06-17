@@ -11,6 +11,7 @@ export default {
     props: ['info'], //info tiene el valor de "item" correspondiente a cada cuadro generado dinamicamente con su respectivo valor, fila, columna y vecinos
     computed: {
         valor () {
+  
             if(this.info.inicial){ 
                 if(this.info.bandera){ //tiene bandera?
                     return '🚩'
@@ -24,7 +25,6 @@ export default {
             }
         },
         clase () {
-
             if(this.info.inicial) {
                 if(this.info.inicial) {
                     return 'bandera'

@@ -258,7 +258,7 @@ export default {
 
 
 
-                //LOGICA QUE SETEA LAS BOMBAS QUE TIENE ALREDEDOR EL CUADRO
+                //LOGICA QUE SETEA LA CANTIDAD DE BOMBAS QUE TIENE ALREDEDOR EL CUADRO
 
 
                 //Ojo: AL FACTORIZAR TENER EN CUENTA QUE LA LOGICA DE ESTE MODULO ESTA EN BUCLE FOR CON LA LOGICA QUE SETEA LOS VECINOS, ES DECIR
@@ -277,7 +277,8 @@ export default {
                 }
 
             }
-        
+
+            //PROBAR ESTE COMENTARIO EXISTE ULTIMO COMMIT
 
 
             /* CON EL LLAMADO DE ESTA FUNCION INICIA EL JUEGO */
@@ -416,6 +417,7 @@ export default {
         },
         activarCuadro (cuadro) {
             //si el cuadro esta tapado y no tiene bandera: destapar
+            debugger;
             if (this.jugando && cuadro.inicial && !cuadro.bandera) {
                 cuadro.inicial = false
 
@@ -439,6 +441,7 @@ export default {
                     }
                     else if (cuadro.valor == '') {
                     //recorrer vecinos y despejarlos
+                    debugger;
                     cuadro.vecinos.forEach(v => {
                         this.activarCuadro(this.cuadros[v])
                     })
